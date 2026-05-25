@@ -5,7 +5,7 @@ attempts = 0
 print(f"The current highscore is: {open('highscore.txt').read()}")
 guess = int(input("Guess a number from 1-1000: "))
 while True:
-    number = 111
+    number = 111 # this is just to skip the game remove in final edits
     if guess > number:
         guess = int(input("Lower "))
         attempts = attempts + 1
