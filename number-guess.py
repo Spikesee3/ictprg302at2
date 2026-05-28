@@ -7,8 +7,7 @@ while True:
     attempts = 0
     print(f"The current highscore is: {str(open('highscore.txt').read())} made by {str(open('highscorename.txt').read())}")
     guess = int(input("Guess a number from 1-100: "))
-    number = 11 # this is just to skip the game remove in final edits
-    if guess == 4: # If you enter 4 it changes the highscore to 99 good for saving time
+    if guess == 9999: # If you enter 9999 it changes the highscore to 99 good for saving time
         with open('highscore.txt', 'a') as f:
                 f.truncate(0)
                 f.write("99")
