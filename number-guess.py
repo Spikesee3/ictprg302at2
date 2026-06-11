@@ -14,6 +14,10 @@ while True:
                 f.close()
         print("Changed the high score to 99")
         continue
+    elif guess > "100":
+        print(f"{guess} is not a valid input, please choose a number from 1-100")
+    elif guess < "1":
+        print(f"{guess} is not a valid input, please choose a number from 1-100")
     elif guess > number:
         guess = int(input("Lower "))
         attempts = attempts + 1
