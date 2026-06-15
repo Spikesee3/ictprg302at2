@@ -9,18 +9,10 @@ while repeatplay != 0:
     repeatplay = 1
     def numberguess():
         attempts = 0
-        #number = random.randint(1, 100)
-        number = 3 # remove this before submission and uncomment the bit above
+        number = random.randint(1, 100)
         guess = int(input("Guess a number from 1-100: "))
         while True:
-            if guess == 9999: # If you enter 9999 it changes the highscore to 99 good for saving time but remove before submission
-                with open('highscore.txt', 'a') as f:
-                        f.truncate(0)
-                        f.write("99")
-                        f.close()
-                print("Changed the high score to 99")
-                exit()
-            elif guess > number:
+            if guess > number:
                 guess = int(input("Lower "))
                 attempts = attempts + 1
             elif guess < number:
