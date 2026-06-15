@@ -13,10 +13,10 @@ while repeatplay != 0:
         guess = int(input("Guess a number from 1-100: "))
         while True:
             if guess > number:
-                guess = int(input("Lower "))
+                guess = int(input("The number is lower, guess again: "))
                 attempts = attempts + 1
             elif guess < number:
-                guess = int(input("Higher "))
+                guess = int(input("The number is higher, guess again: "))
                 attempts = attempts + 1
             elif guess == number:
                 print("Congratulations you guessed the number in " + str(attempts) + " tries!")
