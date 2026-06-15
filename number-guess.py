@@ -1,6 +1,20 @@
 import os
 import random
+import os.path
 repeatplay = 1
+
+if os.path.isfile("highscore.txt") == True:
+    pass
+else:
+    with open('highscore.txt', 'w') as f:
+            f.write("9999")
+            f.close() 
+if os.path.isfile("highscorename.txt") == True:
+    pass
+else:
+    with open('highscorename.txt', 'w') as f:
+            f.write("Ethan")
+            f.close() 
 
 while repeatplay != 0:
     print("--------------------------------------\n| __      __   _                  _  |\n| \\ \\    / /__| |__ ___ _ __  ___| | |\n|  \\ \\/\\/ / -_) / _/ _ \\ '  \\/ -_)_| |\n|   \\_/\\_/\\___|_\\__\\___/_|_|_\\___(_) |\n--------------------------------------\n")
@@ -45,7 +59,7 @@ while repeatplay != 0:
             else:
                 print(f"{guess} is not a valid number, please choose a number from 1-100")
     numberguess()             
-                    
+    del name               
     def repeatplay():
             playagain = input("Play again? (y/n): ")
             if playagain == "y":
